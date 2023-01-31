@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "doc": "jsdoc -c jsdoc.json"
+    "jsdoc": "jsdoc -c jsdoc.conf"
   },
   "keywords": [],
   "author": "sb_shin",
   "license": "ISC",
   "devDependencies": {
     "jsdoc": "^4.0.0"
+  },
+  "dependencies": {
+    "docdash": "^2.0.1"
   }
 }
