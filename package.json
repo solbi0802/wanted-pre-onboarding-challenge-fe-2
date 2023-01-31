@@ -1,0 +1,15 @@
+{
+  "name": "jsdoc_todo_app",
+  "version": "1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "keywords": [],
+  "author": "sb_shin",
+  "license": "ISC",
+  "devDependencies": {
+    "jsdoc": "^4.0.0"
+  }
+}
