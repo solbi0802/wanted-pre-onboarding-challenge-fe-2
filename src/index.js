@@ -4,14 +4,22 @@
  */
 
 /**
- * TOdo Modeling
- * @typeof {object} Todo
- * @property {number} id - 아이디
- * @property {string} content - 내용
- * @property {boolean} isCompleted - 완료여부
- * @property {string} category - 카테고리
- * @property {Array<string>} tags - 태그들
+ * @class
+ * @property {number} id                       - 아이디(required)
+ * @property {string} content                  - 내용(required)
+ * @property {boolean} isCompleted                  - 완료여부(required)
+ * @property {string} category                 - 카테고리(required)
+ * @property {Tag} [tags]     - 태그들(optional)
  */
+class Todo {}
+
+/**
+ * @class
+ * @property {number} id - 아이디
+ * @property {string} value - 태그명
+ */
+
+class Tag {}
 
 /**
  * Create Todo
@@ -19,8 +27,8 @@
  * @param {string}  content
  * @param {boolean}  isCompleted
  * @param {string}  category
- * @param {Array<string>} [tags]
- * @return {object} {id, content, ..}
+ * @param {Tag} [tags]
+ * @return {object} {id: 1, content: '리액트앱 개발', ..}
  */
 
 const createTodo = (content, isCompleted, category, tags) => {};
@@ -28,73 +36,55 @@ const createTodo = (content, isCompleted, category, tags) => {};
 /**
  * Read All TodoList
  * @function getAllList
- * @return {object} {id, content, ..}
+ * @return {object} {id: 1, content: '리액트앱 개발', ..}
  */
 
 const getAllList = () => {};
 
 /**
  * Read Todo(id)
- * @function getById
+ * @function getTodoById
  * @param {number}  id
- * @return {object} {id, content, ..}
+ * @return {object} {id: 1, content: '리액트앱 개발', ..}
  */
 
-const getById = (id) => {};
+const getTodoById = (id) => {};
 
 /**
  * update Todo
  * @function updateTodo
- * @param {string}  content
- * @param {boolean}  isCompleted
- * @param {string}  category
- * @param {Array<string>} [tags]
- * @return {object} {id, content, ..}
- */
-
-const updateTodo = (content, isCompleted, category, tags) => {};
-
-/**
- * update Todo By Id
- * @function updateTodoById
  * @param {number}  id
- * @param {Array<string>} [tags]
- * @return {object} {id, content, ..}
+ * @param {Todo} todo
+ * @return {object} {id: 1, content: '리액트앱 개발', ..}
  */
 
-const updateTodoById = (id, tags) => {};
+const updateTodo = (id, todo) => {};
 
 /**
- * Delete All Todo
- * @function deleteAllTodo
+ * update Tag
+ * @function updateTodo
  * @param {number}  id
- * @return {object} {id, content, ..}
+ * @param {number} tagId
+ * @return {object} {id: 1, value: '태그1'}
  */
 
-const deleteAllTodo = () => {};
+const updateTag = (id, tagId) => {};
 
 /**
- * Delete Todo By Id
- * @function deleteTodoById
- * @param {number}  id
- * @return {object} {id, content, ..}
+ * Delete Todo
+ * @function deleteTodo
+ * @param {number}  [id]
+ * @return {object} {id: 1, content: '리액트앱 개발', ..}
  */
 
-const deleteTodoById = (id) => {};
+const deleteTodo = (id) => {};
 
 /**
- * Delete All Tags
- * @function deleteAllTags
- * @return {object} {id, content, ..}
+ * Delete Tag
+ * @function deleteTag
+ * @param {number}  [id]
+ * @param {number}  [tagId]
+ * @return {object} {id: 1, content: '리액트앱 개발', ..}
  */
 
-const deleteAllTags = () => {};
-
-/**
- * Delete Tags By Id
- * @function deleteTagsById
- * @param {number} id
- * @return {object} {id, content, ..}
- */
-
-const deleteTagsById = (id) => {};
+const deleteTag = (id, tagId) => {};
